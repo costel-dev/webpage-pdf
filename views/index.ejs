@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebPage to PDF</title>
+    <style>
+      body {
+        background: whitesmoke;
+        box-sizing: border-box;
+        margin: 10% 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      div {
+        background: #ddd;
+        border-radius: 20px;
+        width: 700px;
+        height: 300px;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 70px;
+        color: rgb(0, 167, 167);
+      }
+      input {
+        display: block;
+        margin: 0 auto;
+        border: none;
+        outline: none;
+        height: 30px;
+        width: 250px;
+        border-radius: 5px;
+      }
+      button {
+        display: block;
+        margin: 30px auto;
+        background: rgb(0, 167, 167);
+        border: none;
+        height: 40px;
+        width: auto;
+        border-radius: 5px;
+        font-size: large;
+        color: white;
+        padding: 0 20px;
+        outline: none;
+      }
+      button:hover {
+        filter: brightness(80%);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Transform your WebPage into a PDF file</h1>
+      <form id="form">
+        <label for="url"></label>
+        <input
+          type="text"
+          id="url"
+          placeholder="Enter page url"
+          name="pageUrl"
+        />
+        <button type="submit">Generate PDF</button>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById('form');
+      const url = document.getElementById('url');
+      const sendRequest = (e) => {
+        e.preventDefault();
+        window.location = `${window.location.href}pdf?target=${url.value}`;
+      };
+      // Event Listener
+      form.addEventListener('submit', sendRequest);
+    </script>
+  </body>
+</html>

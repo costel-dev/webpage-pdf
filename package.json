@@ -1,0 +1,26 @@
+{
+  "name": "webpage_pdf",
+  "version": "1.0.0",
+  "description": "A node server to transform a webpage into a pdf file",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "keywords": [
+    "node",
+    "webpage",
+    "pdf",
+    "express"
+  ],
+  "author": "Costel Cuconoiu",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "puppeteer": "^5.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
